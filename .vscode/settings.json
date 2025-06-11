@@ -1,0 +1,289 @@
+{
+    // Python Interpreter and Environment
+    "python.defaultInterpreterPath": "./venv/bin/python",
+    "python.terminal.activateEnvironment": true,
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "python.condaPath": "",
+    // Linting Configuration for ML/NLP Project
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.mypyEnabled": true,
+    "python.linting.banditEnabled": true,
+    "python.linting.lintOnSave": true,
+    "python.linting.maxNumberOfProblems": 100,
+    // Flake8 configuration optimized for ML projects
+    "python.linting.flake8Args": [
+        "--max-line-length=88",
+        "--ignore=E203,W503,E501,W504",
+        "--exclude=venv,__pycache__,.git,data,models,notebooks/.ipynb_checkpoints",
+        "--per-file-ignores=__init__.py:F401"
+    ],
+    // MyPy configuration for type checking
+    "python.linting.mypyArgs": [
+        "--ignore-missing-imports",
+        "--follow-imports=silent",
+        "--show-column-numbers",
+        "--strict-optional"
+    ],
+    // Formatting Configuration
+    "python.formatting.provider": "black",
+    "python.formatting.blackArgs": [
+        "--line-length=88",
+        "--target-version=py39"
+    ],
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": false,
+    "editor.formatOnType": false,
+    // Import Sorting with isort
+    "python.sortImports.args": [
+        "--profile=black",
+        "--multi-line=3",
+        "--trailing-comma",
+        "--force-grid-wrap=0",
+        "--combine-as",
+        "--line-width=88",
+        "--skip=venv,env"
+    ],
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "always",
+        "source.fixAll.flake8": "always"
+    },
+    // Testing Configuration for ML Pipeline
+    "python.testing.pytestEnabled": true,
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestArgs": [
+        "tests",
+        "-v",
+        "--tb=short",
+        "--cov=src",
+        "--cov-report=html",
+        "--cov-report=term-missing"
+    ],
+    "python.testing.autoTestDiscoverOnSaveEnabled": true,
+    "python.testing.pytestPath": "./venv/bin/pytest",
+    // Jupyter Notebook Settings for ML Exploration
+    "jupyter.askForKernelRestart": false,
+    "jupyter.interactiveWindowMode": "perFile",
+    "jupyter.sendSelectionToInteractiveWindow": true,
+    "jupyter.alwaysTrustNotebooks": true,
+    "jupyter.jupyterServerType": "local",
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "notebook.lineNumbers": "on",
+    "notebook.showCellStatusBar": "visible",
+    "notebook.consolidatedOutputButton": true,
+    "notebook.output.textLineLimit": 30,
+    // Editor Configuration optimized for ML code
+    "editor.rulers": [
+        88,
+        120
+    ],
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "editor.wordWrap": "bounded",
+    "editor.wordWrapColumn": 88,
+    "editor.renderWhitespace": "trailing",
+    "editor.trimAutoWhitespace": true,
+    "editor.showFoldingControls": "always",
+    "editor.folding": true,
+    "editor.foldingStrategy": "indentation",
+    // IntelliSense Configuration
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.completeFunctionParens": true,
+    "python.analysis.autoSearchPaths": true,
+    "python.analysis.extraPaths": [
+        "./src",
+        "./scripts",
+        "./notebooks"
+    ],
+    // File Associations for FND Project
+    "files.associations": {
+        "*.py": "python",
+        "*.pyx": "python",
+        "*.pyi": "python",
+        "*.ipynb": "jupyter-notebook",
+        "*.jsonl": "jsonlines",
+        "*.csv": "csv",
+        "*.tsv": "tsv",
+        "requirements*.txt": "pip-requirements",
+        "*.cfg": "ini",
+        "*.conf": "ini",
+        "*.yaml": "yaml",
+        "*.yml": "yaml",
+        "Dockerfile*": "dockerfile",
+        "*.env*": "dotenv",
+        "*.md": "markdown",
+        "*.log": "log"
+    },
+    // Files to exclude from search/explorer (FND specific)
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/*.pyc": true,
+        "**/*.pyo": true,
+        "**/venv": true,
+        "**/env": true,
+        "**/.env": true,
+        "**/node_modules": true,
+        "**/.git": true,
+        "**/*.egg-info": true,
+        "**/dist": true,
+        "**/build": true,
+        "**/.pytest_cache": true,
+        "**/.coverage": true,
+        "**/htmlcov": true,
+        "**/.mypy_cache": true,
+        "**/models/*.bin": true,
+        "**/models/*.pkl": true,
+        "**/models/*.joblib": true,
+        "**/models/*.h5": true,
+        "**/models/*.pt": true,
+        "**/models/*.pth": true,
+        "**/data/raw/**/*.csv": false,
+        "**/data/processed/**/*.pkl": true,
+        "**/logs/*.log": true,
+        "**/.mlruns": true,
+        "**/mlruns": true,
+        "**/.neptune": true,
+        "**/wandb": true,
+        "**/.ipynb_checkpoints": true
+    },
+    // Search Configuration for ML Project
+    "search.exclude": {
+        "**/venv": true,
+        "**/env": true,
+        "**/__pycache__": true,
+        "**/node_modules": true,
+        "**/dist": true,
+        "**/build": true,
+        "**/*.pyc": true,
+        "**/data/processed/**": true,
+        "**/models/*.bin": true,
+        "**/models/*.pkl": true,
+        "**/models/*.joblib": true,
+        "**/models/*.h5": true,
+        "**/models/*.pt": true,
+        "**/models/*.pth": true,
+        "**/logs": true,
+        "**/.mlruns": true,
+        "**/mlruns": true,
+        "**/wandb": true,
+        "**/.ipynb_checkpoints": true
+    },
+    // Git Configuration
+    "git.ignoreLimitWarning": true,
+    "git.autofetch": true,
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "git.enableCommitSigning": false,
+    // Terminal Configuration
+    "terminal.integrated.env.linux": {
+        "PYTHONPATH": "${workspaceFolder}/src:${workspaceFolder}"
+    },
+    "terminal.integrated.env.osx": {
+        "PYTHONPATH": "${workspaceFolder}/src:${workspaceFolder}"
+    },
+    "terminal.integrated.env.windows": {
+        "PYTHONPATH": "${workspaceFolder}/src;${workspaceFolder}"
+    },
+    // Language-specific settings
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "always"
+        },
+        "editor.tabSize": 4
+    },
+    "[jupyter]": {
+        "editor.defaultFormatter": "ms-python.python",
+        "editor.formatOnSave": true
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.tabSize": 2
+    },
+    "[yaml]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.tabSize": 2
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.wordWrap": "on",
+        "editor.quickSuggestions": {
+            "other": false,
+            "comments": false,
+            "strings": false
+        }
+    },
+    // Extension-specific settings
+    "autoDocstring.docstringFormat": "google-notypes",
+    "autoDocstring.startOnNewLine": false,
+    "autoDocstring.includeExtendedSummary": true,
+    // Todo Tree for tracking TODOs in ML pipeline
+    "todo-tree.general.tags": [
+        "TODO",
+        "FIXME",
+        "HACK",
+        "NOTE",
+        "OPTIMIZE",
+        "EXPERIMENT",
+        "FEATURE",
+        "BUG"
+    ],
+    // Bracket Colorizer for complex ML code
+    "bracket-pair-colorizer-2.colors": [
+        "#ffd700",
+        "#da70d6",
+        "#179fff"
+    ],
+    // ML/Data Science specific settings
+    "files.watcherExclude": {
+        "**/data/**": true,
+        "**/models/**": true,
+        "**/logs/**": true,
+        "**/.mlruns/**": true,
+        "**/wandb/**": true
+    },
+    // Performance settings for large datasets
+    "files.maxMemoryForLargeFilesMB": 4096,
+    "search.maxResults": 10000,
+    "search.smartCase": true,
+    // Emmet for HTML templates (Flask/FastAPI)
+    "emmet.includeLanguages": {
+        "jinja-html": "html",
+        "jinja2": "html"
+    },
+    // REST Client for API testing
+    "rest-client.environmentVariables": {
+        "local": {
+            "baseUrl": "http://localhost:8000",
+            "apiKey": "dev-key"
+        },
+        "production": {
+            "baseUrl": "https://your-fnd-api.com",
+            "apiKey": "prod-key"
+        }
+    },
+    // Code Coverage highlighting
+    "coverage-gutters.showGutterCoverage": true,
+    "coverage-gutters.showLineCoverage": true,
+    "coverage-gutters.showRulerCoverage": true,
+    // Workbench settings for better ML development
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.colorCustomizations": {
+        "editorRuler.foreground": "#444444"
+    },
+    // Explorer settings
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.compactFolders": false,
+    // Recommended extensions (add to extensions.json)
+    "extensions.ignoreRecommendations": false
+}
