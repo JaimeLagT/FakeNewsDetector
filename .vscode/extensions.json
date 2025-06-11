@@ -1,0 +1,72 @@
+{
+    "recommendations": [
+        // Python Development
+        "ms-python.python",
+        "ms-python.flake8",
+        "ms-python.black-formatter",
+        "ms-python.isort",
+        "ms-python.mypy-type-checker",
+        "ms-python.pylint",
+        // Jupyter Notebooks
+        "ms-toolsai.jupyter",
+        "ms-toolsai.jupyter-keymap",
+        "ms-toolsai.jupyter-renderers",
+        "ms-toolsai.vscode-jupyter-cell-tags",
+        "ms-toolsai.vscode-jupyter-slideshow",
+        // Data Science & ML
+        "ms-python.vscode-pylance",
+        "mechatroner.rainbow-csv",
+        "janisdd.vscode-edit-csv",
+        "ms-vscode.vscode-json",
+        // Web Development (Flask/FastAPI)
+        "ms-vscode.vscode-typescript-next",
+        "bradlc.vscode-tailwindcss",
+        "formulahendry.auto-rename-tag",
+        "esbenp.prettier-vscode",
+        // API Development & Testing
+        "humao.rest-client",
+        "42crunch.vscode-openapi",
+        "ms-vscode.vscode-thunder-client",
+        // Git & Version Control
+        "eamodio.gitlens",
+        "mhutchie.git-graph",
+        "donjayamanne.githistory",
+        // Documentation & Productivity
+        "njpwerner.autodocstring",
+        "gruntfuggly.todo-tree",
+        "streetsidesoftware.code-spell-checker",
+        "yzhang.markdown-all-in-one",
+        "shd101wyy.markdown-preview-enhanced",
+        // Code Quality & Testing
+        "ryanluker.vscode-coverage-gutters",
+        "littlefoxteam.vscode-python-test-adapter",
+        "ms-vscode.test-adapter-converter",
+        // Docker & Deployment
+        "ms-azuretools.vscode-docker",
+        "ms-vscode-remote.remote-containers",
+        "ms-vscode-remote.remote-ssh",
+        // Environment & Configuration
+        "mikestead.dotenv",
+        "redhat.vscode-yaml",
+        "tamasfe.even-better-toml",
+        // Visualization & Themes
+        "ms-vscode.vscode-color-info",
+        "formulahendry.code-runner",
+        "alefragnani.bookmarks",
+        "vscode-icons-team.vscode-icons",
+        // AI & ML Specific
+        "ms-dotnettools.vscode-dotnet-runtime",
+        "ms-toolsai.datawrangler",
+        // Database (for storing results/metadata)
+        "ms-mssql.mssql",
+        "cweijan.vscode-mysql-client2",
+        // Performance & Monitoring
+        "ms-vscode.vscode-profiler",
+        "wayou.vscode-todo-highlight"
+    ],
+    "unwantedRecommendations": [
+        "ms-python.python-debug-configurations",
+        "ms-python.anaconda-extension-pack",
+        "formulahendry.terminal"
+    ]
+}
